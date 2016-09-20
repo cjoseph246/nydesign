@@ -1,0 +1,13 @@
+#!/bin/bash
+
+number=1
+while [ $number -lt 47 ]; do
+    touch $number.txt
+    git add $number.txt
+    echo "Please enter git author/commiter date (Feb 16 14:00 2037)"
+    read author
+    echo "GIT_AUTHOR_DATE=$author GIT_COMMITER_DATE=$author"
+    GIT_AUTHOR_DATE=$author GIT_COMMITER_DATE=$author git commit -m "$number.txt" 
+    number=$((number + 1))
+done
+
