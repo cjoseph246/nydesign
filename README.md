@@ -20,3 +20,5 @@ while [ $number -lt 47 ]; do
     GIT_AUTHOR_DATE=$author GIT_COMMITTER_DATE=$author git commit -m "$number.txt" 
     number=$((number + 1))
 done
+
+[design](github-nydesign.png)
